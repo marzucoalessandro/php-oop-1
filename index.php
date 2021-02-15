@@ -52,8 +52,16 @@ $Hotel = [$Ambassador, $Splendid, $Vittoria, $Astrid, $Belvedere, $Majestic, $Mi
         display: flex;
         flex-wrap: wrap;
       }
-      .hotel{
+      .hotel1{
         background-color: lightblue;
+        border: 1px solid black;
+        border-radius: 5px;
+        padding: 20px;
+        margin: 20px;
+        width: 400px;
+      }
+      .hotel2{
+        background-color: orange;
         border: 1px solid black;
         border-radius: 5px;
         padding: 20px;
@@ -70,7 +78,7 @@ $Hotel = [$Ambassador, $Splendid, $Vittoria, $Astrid, $Belvedere, $Majestic, $Mi
           <?php foreach ($Hotel as $key => $value): ?>
             <?php if ($value->parking == "si"): ?>
 
-              <div class="hotel">
+              <div class="hotel1">
                 <h1>Nome: <?php echo ($value->name); ?></h1>
                 <h3>Città: <?php echo ($value->city); ?></h3>
                 <p>Indirizzo: <?php echo ($value->address); ?></p>
@@ -79,8 +87,8 @@ $Hotel = [$Ambassador, $Splendid, $Vittoria, $Astrid, $Belvedere, $Majestic, $Mi
                 <p>Parcheggio: <?php echo ($value->parking) ?></p>
               </div>
             <?php else: ?>
-              
-              <div class="hotel">
+
+              <div class="hotel2">
                 <h1>Nome: <?php echo ($value->name); ?></h1>
                 <h3>Città: <?php echo ($value->city); ?></h3>
                 <p>Indirizzo: <?php echo ($value->address); ?></p>
@@ -90,19 +98,8 @@ $Hotel = [$Ambassador, $Splendid, $Vittoria, $Astrid, $Belvedere, $Majestic, $Mi
               </div>
             <?php endif; ?>
 
-
-
-
-
-
-
-
-
-
-
-
           <?php endforeach; ?>
 
         </div>
-      </body>
-      </html>
+    </body>
+  </html>
